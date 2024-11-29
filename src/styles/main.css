@@ -87,3 +87,10 @@ h2 {
 .boxMatch::after {
     transform: rotateY(180deg);
 }
+
+@media (max-width: 768px) {
+    .container {
+        overflow: hidden;
+        width: 100vw;
+    }
+}
