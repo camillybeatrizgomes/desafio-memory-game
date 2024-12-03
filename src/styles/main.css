@@ -88,9 +88,80 @@ h2 {
     transform: rotateY(180deg);
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
-    .container {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
-        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .container {
+        padding: 10px;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0 15px;
+    }
+
+    h2 {
+        font-size: 2em;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .reset {
+        font-size: 1.2em;
+        padding: 10px;
+        width: auto;
+    }
+
+    .game {
+        display: grid;
+        width: 75vw; /* Reduzido para dar margem lateral */
+        height: auto;
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+        gap: 10px; /* Espaço maior entre itens */
+    }
+
+    .item {
+        aspect-ratio: 1; /* Garante itens quadrados */
+        width: 80%; /* Ajusta ao grid */
+        font-size: 1.8em; /* Reduz o tamanho da fonte */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+        gap: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .reset {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .game {
+        width: 90vw; /* Reduzido para margem adicional */
+        gap: 8px; /* Espaçamento menor para itens em telas menores */
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    }
+
+    .item {
+        aspect-ratio: 1; /* Mantém itens quadrados */
+        font-size: 1.5em; /* Reduz tamanho da fonte */
     }
 }
